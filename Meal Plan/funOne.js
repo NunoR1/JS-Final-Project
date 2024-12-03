@@ -7,7 +7,7 @@ let goal = document.getElementById("goal")
 let plan = document.getElementById("day")
 
 // within the div the thing that says the current day
-let heading = document.getElementById("dayName")
+let heading = document.getElementById("heading")
 
 
 let clearButton = document.getElementById("clear")
@@ -25,12 +25,7 @@ let data = {
     "Friday": []
 }
 
-let newMeal = document.createElement("input")
-let submit = document.createElement("input")
-newMeal.setAttribute("type", "button")
-submit.setAttribute("type", "button")
-submit.value = "Submit"
-newMeal.value = "Add new meal"
+
 
 
 
@@ -78,6 +73,17 @@ function generateWindow() {
 
 }
 
+// creates the additional buttons for the additional content for the DLC 
+let newMeal = document.createElement("input")
+// submits the user inputs per day
+let submit = document.createElement("input")
+newMeal.setAttribute("type", "button")
+submit.setAttribute("type", "button")
+submit.value = "Submit"
+newMeal.value = "Add new meal"
+
+
+heading.textContent = curDay
 
 submit.addEventListener("click", function() {
     // pushes the data into the respective day's list in the data library as a list 
