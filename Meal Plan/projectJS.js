@@ -2,61 +2,12 @@
 let name = document.getElementById("name")
 let email = document.getElementById("email")
 let goal = document.getElementById("goal")
-
-// the div
+// the div that contains everything
 let plan = document.getElementById("day")
-
-// within the div the thing that says the current day and the add meal button
-let heading = document.getElementById("dayName")
-
-
-let newMeal = document.getElementById("newMeal")
+// button that clears the screen
 let clearButton = document.getElementById("clear")
-let submit = document.getElementById("submit")
-
-// in order to change the heading as each day passes
-let curDay = "Monday"
-let days = ["Tuesday", "Wednesday", "Thursday", "Friday"]
-
-// logs the data the user inputs for when the new window is created
-let data = {
-    "Monday": [],
-    "Tuesday": [],
-    "Wednesday": [],
-    "Thursday": [],
-    "Friday": []
-}
-
-function addNewMeal() {
-    let whatType = prompt("What meal is this? (Breakfast, Lunch, Snack, Dinner)")
-    
-    // checks if the user clicked cancel
-    if (whatType == null) {
-        return
-    }
-
-    // create 
-    let meal = document.createElement("p")
-    meal.textContent = `${whatType}:`
-    meal.style.fontSize = "18px"
-    meal.style.marginBottom = "0"
-    
-    let mealType = document.createElement("input")
-    mealType.setAttribute("type", "text")
-    mealType.setAttribute("placeholder", "Your meal")
-
-
-    let calories = document.createElement("input")
-    calories.setAttribute("type", "number")
-    calories.setAttribute("placeholder", "Calorie Count")
-
-
-    plan.appendChild(meal)
-    plan.appendChild(mealType)
-    plan.appendChild(calories)
-    console.log(plan.childNodes)
-}
-
+// button that generates the new window
+let generator = document.getElementById("generate")
 
 function clear() {
     let length = plan.childNodes.length
@@ -65,29 +16,6 @@ function clear() {
     }
 }
 
-
 function generateWindow() {
 
 }
-
-
-submit.addEventListener("click", function() {
-    // pushes the data into the respective day's list in the data library as a list 
-    for (let i = 3; i < plan.childNodes.length; i += 3) {
-        data[curDay].push([plan.childNodes[i+1].value, plan.childNodes[i+2].value])
-    }
-    
-    // gets rid of the fields
-    clear()
-    
-    // changes the day text
-    if (days.indexOf(curDay) != 3) { 
-        curDay = days[days.indexOf(curDay) + 1]
-        heading.textContent = curDay
-    }
-    
-});
-
-clearButton.addEventListener("click", clear)◘
-
-newMeal.addEventListener("click", addNewMeal)
