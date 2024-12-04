@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt/Decrypt Caesar Cypher</title>
+    <script src="index.js" defer></script>
+</head>
+<body style="text-align: center;">
+    <h1 style="font-size: 400%; font-family: 'Lucida Sans'; color: brown;">Caesar Cypher</h1>
+    <form id="theForm">
+        <label for="theInput" style="margin-bottom: 0; font-size: 200%;"><b>Enter your text:</b></label><br>
+        <textarea id="theInput" cols="100" rows="15"></textarea><br>
+        
+        <label for="shift#">Number of shift:</label>
+        <input type="number" id="shift#" max="26" min="0" value="0" style="width: 3%;"><br>
+
+        <label for="shiftDir">Direction of shift: <b id="shiftDirDisplay">Left</b></label>
+        <button type="button" id="shiftDir" style="border: 0; font-size: 20px; margin-left: 0%;">🔁</button><br>
+        
+        <label for="convertType">Encrypt or Decrypt: <b id="convertTypeDisplay">Encrypt</b></label>
+        <button type="button" id="convertType" style="border: 0; font-size: 20px; margin-left: 0%;">🔁</button><br>
+
+        <button type="submit" id="submit">Encrypt</button>
+    </form>
+    <div id="output" style="font-size: xx-large;"></div>
+</body>
+</html>
