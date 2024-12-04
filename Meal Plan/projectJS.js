@@ -15,7 +15,7 @@ function clear() {
     let length = plan.childNodes.length
     // the input nodes start at the seventh index of the div so that is the first i value and every consequent input field is 8 indexes away
     for (let i = 7; i < length; i += 8) {
-        plan.childNodes[i].value = ""
+        plan.childNodes[i].value = "" // sets the value of each input to clear
     }
 }
 
@@ -52,7 +52,7 @@ function generateWindow() {
     // the title of the page
     newWindow.document.write(`<title>Meal Plan</title>`)
     
-    // use the required data
+    // uses and formats the required data on the new window
     newWindow.document.write(`<h1 style="text-align: center; margin-bottom: 0px;">${personName.value}'s Meal Plan</h1>`)
     newWindow.document.write(`<p style="text-align: center; margin-top: 0px;">${email.value}</p>`)
     newWindow.document.write(`<h2 style="text-align: center;">Goal: ${goal.value}</h2>`)
@@ -65,7 +65,7 @@ function generateWindow() {
     printingButton.textContent = "PRINT/DOWNLOAD"
     printingButton.setAttribute("type", "button")
     // this works
-    printingButton.setAttribute("onclick", "window.print()")
+    printingButton.setAttribute("onclick", "window.print()") // sets the onclick attribute of the print button to run the window.print() function
     
     // append it to the body
     newWindow.document.body.appendChild(printingButton)
