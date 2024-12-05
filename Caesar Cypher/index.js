@@ -3,15 +3,15 @@ let userInput
 
 let output = document.getElementById("output") // the div where the encrypted and decrypted text while be output
 
-let submit = document.getElementById("submit")
+let submit = document.getElementById("submit") // submit button
 
 let shiftNum
 
-let shiftDir = document.getElementById("shiftDir")
-let shiftDirDisplay = document.getElementById("shiftDirDisplay")
+let shiftDir = document.getElementById("shiftDir") // shift direction button
+let shiftDirDisplay = document.getElementById("shiftDirDisplay") // displays current shift direction
 
-let convertType = document.getElementById("convertType")
-let convertTypeDisplay = document.getElementById("convertTypeDisplay")
+let convertType = document.getElementById("convertType") // convert type button
+let convertTypeDisplay = document.getElementById("convertTypeDisplay") // displays the current convert type
 
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] // used to shift 
 
